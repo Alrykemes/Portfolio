@@ -1,7 +1,5 @@
 import { NavbarStyled } from "./Styles";
 import { useState } from "react";
-import Icon from "@mdi/react";
-import { mdiMenu } from "@mdi/js";
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);

@@ -6,7 +6,7 @@ import Icones from "./components/IconTec/index";
 import CardProject from "./components/CardProject/index";
 import CardContato from "./components/CardContato/index";
 import Icon from "@mdi/react";
-import { mdiDownload, mdiEmail, mdiHome, mdiLink, mdiPhone } from "@mdi/js";
+import { mdiDownload, mdiEmail, mdiHome, mdiLink, mdiLoading, mdiPhone, mdiWhatsapp } from "@mdi/js";
 import FtMinha from "./assets/ftcurriculum.jpg";
 import geradorDeSenha from "./assets/projetosImagens/geradorDeSenha.jpg";
 import rickAndMorty from "./assets/projetosImagens/rickAndMortyApi.jpg";

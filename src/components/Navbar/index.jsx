@@ -4,16 +4,28 @@ import { useState } from "react";
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleHamburger = () => {
-    let bars = document.querySelectorAll('.bar');
-    bars.forEach(bar => bar.classList.toggle('x'))
-    }
-
     const toggleMenu = () => {
         setIsOpen((open) => !open);
-        toggleHamburger();
+
+        let triggerEl = document.querySelector('.trigger')
+        let navToggleEl = document.querySelector('.nav-toggle')
+        let inicioMenuEl = document.querySelector('#inicioMenu')
+        let sobreMenuEl = document.querySelector('#sobreMenu')
+        let portfolioMenuEl = document.querySelector('#portfolioMenu')
+        let contatoMenuEl = document.querySelector('#contatoMenu')
+        let bars = document.querySelectorAll('.bar')
+
+        function toggleHamburger() {
+            bars.forEach(bar => bar.classList.toggle('x'))
+        }
+
+        triggerEl.addEventListener("click", toggleHamburger);
+        navToggleEl.addEventListener("click", toggleHamburger);
+        inicioMenuEl.addEventListener("click", toggleHamburger);
+        sobreMenuEl.addEventListener("click", toggleHamburger);
+        portfolioMenuEl.addEventListener("click", toggleHamburger);
+        contatoMenuEl.addEventListener("click", toggleHamburger);
     }
-    
     return(
         <header>
         <NavbarStyled>
@@ -25,10 +37,10 @@ const NavBar = () => {
                     <div className="menuDesktop">
                         <ul className="menuDrop">
                             <li className="trigger" onClick={toggleMenu}>
-                            <a className="nav-toggle">
-                                <span className="bar"></span>
-                                <span className="bar"></span>
-                                <span className="bar"></span>
+                            <a class="nav-toggle">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
                             </a>
                             </li>
                             <li className={`liDesktop ${isOpen ? "isOpen" : ""}`}>

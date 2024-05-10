@@ -26,7 +26,7 @@ font-size: 1rem;
     padding: 0 0 3rem 6rem ;
 }
 
-.tecnologias {
+.technologies {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,7 +49,7 @@ font-size: 1rem;
     justify-content: center;
 }
 
-.contato {
+.contact {
     display: flex;
     flex-direction: row;
     align-content: center;

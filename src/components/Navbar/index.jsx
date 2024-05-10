@@ -24,11 +24,11 @@ const NavBar = () => {
                     <div className="menuDesktop">
                         <ul className="menuDrop">
                             <li className="trigger" onClick={toggleMenu}>
-                            <a className="nav-toggle">
+                            <div className="nav-toggle">
                                 <span className="bar"></span>
                                 <span className="bar"></span>
                                 <span className="bar"></span>
-                            </a>
+                            </div>
                             </li>
                             <li className={`liDesktop ${isOpen ? "isOpen" : ""}`}>
                                 <a id="inicioMenu" href="#inicio" onClick={toggleMenu}><h3>Início</h3></a>

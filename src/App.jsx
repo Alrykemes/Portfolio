@@ -7,7 +7,7 @@ import CardProject from "./components/CardProject/index";
 import CardContato from "./components/CardContato/index";
 import Icon from "@mdi/react";
 import { mdiDownload, mdiEmail, mdiHome, mdiLink, mdiPhone } from "@mdi/js";
-import FtMinha from "./assets/ftcurriculum.jpg";
+import MyPhoto from "./assets/ftcurriculum.jpg";
 import geradorDeSenha from "./assets/projetosImagens/geradorDeSenha.jpg";
 import rickAndMorty from "./assets/projetosImagens/rickAndMortyApi.jpg";
 import LoadingProj from "./assets/projetosImagens/LoadingProj.jpg";
@@ -28,15 +28,14 @@ function App() {
   return (
     <>  
       <NavBar/>
-          <a name="inicio"></a>
-      <SectionStyled>
+      <SectionStyled id="inicio">
         <Container>
           <Container className="alignAnimation">
             <TextAnimation/>
           </Container>
           <Letras> 
             <div className="foto">
-            <img src={FtMinha} width="250px" />
+            <img src={MyPhoto} width="250px" alt="Alrykemes Cavalcanti"/>
             </div>
             <h1 className="saudacoes">Oi, Sou o <span className="azul">Alrykemes Cavalcanti</span></h1>
             <h1 className="tagDev">Desenvolvedor FullStack</h1>
@@ -53,24 +52,24 @@ function App() {
             </a>
           </Botoes>
           <Contato>
-            <a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank">
-            <Button label={<img src={Whatsapp} width="30px" title="Whatsapp"/>}/>
+            <a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank" rel="noopener noreferrer">
+            <Button label={<img src={Whatsapp} width="30px" title="Whatsapp" alt="Whatsapp"/>}/>
             </a>
-            <a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank">
-            <Button label={<img src={Gmail} width="30px" title="Email"/>}/>
+            <a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank" rel="noopener noreferrer">
+            <Button label={<img src={Gmail} width="30px" title="Email" alt="Email"/>}/>
             </a>
-            <a href="https://www.linkedin.com/in/alrykemes-cavalcanti-ab937a267/" target="_blank">
-            <Button label={<img src={Linkedin} width="30px" title="Linkedin"/>}/>
+            <a href="https://www.linkedin.com/in/alrykemes-cavalcanti-ab937a267/" target="_blank" rel="noopener noreferrer">
+            <Button label={<img src={Linkedin} width="30px" title="Linkedin" alt="Linkedin"/>}/>
             </a>
-            <a href="https://www.github.com/alrykemes" target="_blank">
-            <Button label={<img src={Github} width="30px" title="Github"/>}/>
+            <a href="https://www.github.com/alrykemes" target="_blank" rel="noopener noreferrer">
+            <Button label={<img src={Github} width="30px" title="Github" alt="Github"/>}/>
             </a>
           </Contato>
           </Letras>
         </Container>
       </SectionStyled>
-          <a name="sobre"></a>
-      <SectionStyled>
+  
+      <SectionStyled id="sobre">
         <Container>
           <Letras>
             <h1 className="sobre">Sobre mim</h1>
@@ -80,7 +79,7 @@ function App() {
             <h1 className="txtTecnologias">Tecnologias</h1>
           </Letras>
 
-          <Container className="tecnologias">
+          <Container className="technologies">
             <Icones svgLocal={HtmlIcon} titleIcon={"Html"}/>
             <Icones svgLocal={CssIcon} titleIcon={"Css"}/>
             <Icones svgLocal={JsIcon} titleIcon={"Js"}/>
@@ -94,8 +93,8 @@ function App() {
           </Container>
         </Container>
       </SectionStyled>
-      <a name="portfolio"></a>
-      <SectionStyled>
+      
+      <SectionStyled id="portfolio">
         <Container>
           <Letras>
             <h1 className="txtPortfolio">Portfólio</h1>
@@ -130,10 +129,10 @@ function App() {
           </Container>
         </Container>
       </SectionStyled>
-      <a name="contato"></a>
-      <footer>
+      
+      <footer id="contato">
           <Container>
-            <Container className="contato">
+            <Container className="contact">
               <CardContato 
               titleContato="Endereço" 
               pathIcon={mdiHome}
@@ -145,18 +144,18 @@ function App() {
               titleContato="Email" 
               pathIcon={mdiEmail}
               content={"alrykemesgc@gmail.com"}
-              content2={<a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank">
-              <Button label={<img src={Gmail} width="30px" title="Email"/>}/>
+              content2={<a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank" rel="noopener noreferrer">
+              <Button label={<img src={Gmail} width="30px" title="Email" alt="Email"/>}/>
               </a>}
               />
               <CardContato 
               titleContato="Telefone" 
               pathIcon={mdiPhone}
               content="+55 8199329-4126"
-              content2={<a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank">
-              <Button label={<img src={Whatsapp} width="30px" title="Whatsapp"/>}/>
+              content2={<a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank" rel="noopener noreferrer">
+              <Button label={<img src={Whatsapp} width="30px" title="Whatsapp" alt="Whatsapp"/>}/>
               </a>}
-              />
+              /> 
             </Container>
           </Container>
       </footer>

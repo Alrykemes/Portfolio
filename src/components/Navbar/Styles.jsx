@@ -107,6 +107,9 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  width: 100%;
+  position: fixed;
+
     .menuDesktop {
         align-items: normal;
     }

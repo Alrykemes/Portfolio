@@ -13,12 +13,14 @@ background-color: #272626;
 
 // Div padrao
 export const Container = styled.div`
+
 margin: 0;
 padding: 0;
 display: flex;
 flex-direction: column;
+align-items: center;
 width: 100%;
-background-color: #272626;
+color: #EFE;
 font-size: 1rem;
 
 .alignAnimation {
@@ -32,10 +34,8 @@ font-size: 1rem;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    align-self: flex-start;
     align-items: center;
-    margin-left: 8rem;
-    width: 660px;
+    width: 65%;
     
     background-color: #131212;
     border-radius: 1.5rem;
@@ -55,6 +55,12 @@ font-size: 1rem;
     align-content: center;
     justify-content: center;
     border-top: 2px solid #EFE;
+    background-color: #272626;
+}
+
+@media only screen and (max-width: 768px) {
+
+
 }
 
 `;
@@ -64,59 +70,59 @@ export const Letras = styled.div`
 
 padding: 0;
 margin: 0 2rem .1rem 0;
+width: 70%;
+display: flex;
+flex-direction: column;
+align-items: start;
 color: #EFE;
 font-size: 1.5rem;
+
 
 h1 {
     margin: 0;
     padding: 0;
 }
 
-.saudacoes {
-    text-align: start;
-    margin-left: 13rem;
-}
-
 .apresentacao {
-    margin: 0 0 0 13rem;
-    width: 700px;
+    display: flex;
+    width: 70%;
     text-align: start;
     font-size: 1.3rem;
-}
-
-.tagDev {
-    text-align: start;
-    color: #39F;
-    margin-left: 13rem;
 }
 
 .azul {
     color: #39F ;
 }
 
+.foto {
+    display: flex;
+    position: absolute;
+    margin-left: 65%;
+}
+
 .foto img {
     border-radius: 250px;
     display: flex;
-    float: right;
-    margin: 0 4rem 0 0;
+}
+
+.sobreContainer {
+ align-items: center;   
 }
 
 .sobre {
-    text-align: start;
-    margin-left: 8rem;
+    text-align: center;
     font-size: 2rem;
 }
 
 .txtSobre {
-    text-align: start;
-    margin-left: 8rem;
+    text-align: start;  
     font-size: 1.3rem;
-    width: 680px;
+    width: 100%;
 }
 
 .txtTecnologias {
-    margin: 2rem 0 1rem 24rem;
-    text-align: start;
+    margin: 2rem 0 1rem 0rem;
+    text-align: center;
     color: #EFE;
     font-size: 1.8rem;    
 }
@@ -128,13 +134,34 @@ h1 {
     font-size: 2.5rem; 
 }
 
+@media only screen and (max-width: 1024px) {
+    .foto img {
+        width: 200px;
+    }
+
+@media only screen and (max-width: 768px) {
+font-size: 1rem;
+
+.foto img {
+ width: 150px;    
+}
+
+.foto{
+    margin-left: 60%;
+}
+
+.apresentacao {
+    font-size: .8rem;
+}
+
+}   
+
 `;
 
 //div dos Buttoes do inicio
 export const Botoes = styled.div`
 
 margin: 0;
-margin-left: 13rem;
 padding: 0;
 width: 0;
 background-color: #272626;
@@ -155,11 +182,14 @@ Button:hover {
 a {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+
+}
 `;
 
 export const Contato = styled.div`
 
-margin: 0 1rem 0 13rem;
 padding: 0;
 width: 0;
 background-color: #272626;
@@ -174,5 +204,9 @@ Button {
 Button:hover {
     scale: 1.1;
     filter: drop-shadow(0 0 .4em #EFE);
+}
+
+@media only screen and (max-width: 768px) {
+    
 }
 `;

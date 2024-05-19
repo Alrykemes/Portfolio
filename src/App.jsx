@@ -33,7 +33,7 @@ function App() {
           <Container className="alignAnimation">
             <TextAnimation/>
           </Container>
-          <Letras> 
+          <Letras className="letrasInicio"> 
             <div className="foto">
             <img src={MyPhoto} width="250px" alt="Alrykemes Cavalcanti"/>
             </div>
@@ -71,7 +71,7 @@ function App() {
   
       <SectionStyled id="sobre">
         <Container>
-          <Letras>
+          <Letras className="sobreContainer">
             <h1 className="sobre">Sobre mim</h1>
             <p className="txtSobre">Graduando CST em Análise e Desenvolvimento de Sistemas, tenho 18 anos
             Focado em implementar, executar e integrar soluções tecnológicas, sempre em 
@@ -88,9 +88,6 @@ function App() {
             <Icones svgLocal={MySqlIcon} titleIcon={"MySql"}/>
             <Icones svgLocal={GitIcon} titleIcon={"Git"}/>
           </Container>
-          <Container className="formacao">
-
-          </Container>
         </Container>
       </SectionStyled>
       
@@ -101,7 +98,7 @@ function App() {
           </Letras>
           <Container className="portfolio">
             <CardProject 
-              linkProj={"https://gerador-de-senhas-okw7zlccz-alrykemes-projects.vercel.app"}
+              linkProj={"https://alrykemes.github.io/GeradorDeSenhas/"}
               linkRepo={"https://github.com/Alrykemes/GeradorDeSenhas"}
               projImage={geradorDeSenha} 
               title="Gerador De Senhas" 

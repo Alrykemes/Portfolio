@@ -21,4 +21,17 @@ h3 {
 p {
     margin: .02rem 0rem;
 }
+
+@media only screen and (max-width: 768px) {
+    width: 125px;
+    margin: .7rem;
+
+    h3{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: .7rem;
+    }
+}
 `;

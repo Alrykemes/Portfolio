@@ -11,7 +11,7 @@ export const AnimatedH3 = styled.h3`
         width: 273px;
         white-space: nowrap;
         overflow: hidden;
-        animation: typing 3s steps(10) infinite;
+        animation: typing 1.8s steps(10) infinite;
 
     @keyframes typing {
         from {
@@ -25,4 +25,17 @@ export const AnimatedH3 = styled.h3`
         }
     }
 
+    @media only screen and (max-width: 425px) {
+
+        font-size: 2rem;
+        width: 168px;
+
+    }
+
+    @media only screen and (max-width: 425px) {
+
+        font-size: 1.6rem;
+        width: 136px;
+
+    }
 `;

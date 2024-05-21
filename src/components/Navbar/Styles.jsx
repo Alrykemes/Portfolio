@@ -148,5 +148,28 @@ h1 {
     }
 
 }
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .logoName {
+    display: flex;
+    margin-left: 3rem;
+  }
+
+  .liDesktop.isOpen a h3{
+      font-size: .9rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .logoName {
+    display: flex;
+    margin-left: 1.5rem;
+  }
+}
 `;
 

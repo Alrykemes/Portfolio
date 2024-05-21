@@ -11,7 +11,7 @@ return(
         <h1>{title}</h1>
         <div className="botoesDiv">
         <a href={linkProj} target="_blank" rel="noopener noreferrer">
-            <Button label2={<Icon path={mdiLink} size={1.3} />}/>
+            <Button label2={<Icon className="icone" path={mdiLink} />}/>
         </a>
         <a href={linkRepo} target="_blank" rel="noopener noreferrer">
             <Button label2={<img src={Github} className="botao" alt="Github"/>}/>

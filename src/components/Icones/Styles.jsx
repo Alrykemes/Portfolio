@@ -23,4 +23,18 @@ p {
     font-weight: bold;
     
 }
+
+@media only screen and (max-width: 425px){
+
+    margin: 1rem 1rem;
+
+    img {
+        width: 35px;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
+
 `;

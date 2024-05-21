@@ -3,11 +3,10 @@ import styled from 'styled-components';
 //section padrao
 export const SectionStyled = styled.section`
 margin: 0;
-padding: 0;
+padding: 100px 0 0 0;
 display: flex;
-align-items: center;
 width: 100%;
-min-height: 738px;
+min-height: 478px;
 background-color: #272626;
 `;
 
@@ -24,8 +23,23 @@ color: #EFE;
 font-size: 1rem;
 
 .alignAnimation {
-    width: 0;
-    padding: 0 0 3rem 6rem ;
+    width: 78%;
+    display: flex;
+    align-items: start;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.alignFoto {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 86%;
+}
+
+.foto img {
+    width: 250px;
+    border-radius: 250px;
 }
 
 .technologies {
@@ -52,16 +66,68 @@ font-size: 1rem;
 .contact {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     border-top: 2px solid #EFE;
     background-color: #272626;
 }
 
-@media only screen and (max-width: 768px) {
-
-
+.letrasInicio {
+    align-items: start;
 }
+
+@media only screen and (max-width: 1024px) {
+    .foto img {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .foto img {
+        width: 150px;
+    }
+
+    .technologies {
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .alignAnimation{
+        margin-bottom: 2.3rem;
+        width: 85%;
+    }
+        
+    .technologies {
+    
+        width: 50%;
+    }
+
+    .foto img {
+        width: 90px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .alignAnimation{
+        margin-bottom: 2rem;
+    }
+        
+    .technologies {
+    
+        width: 80%;
+    }
+
+    .foto {
+        width: 28%;
+    }
+
+    .foto img {
+        width: 80px;
+    }
+}
+
 
 `;
 
@@ -69,18 +135,21 @@ font-size: 1rem;
 export const Letras = styled.div`
 
 padding: 0;
-margin: 0 2rem .1rem 0;
-width: 70%;
+margin: 0;
+width: 78%;
 display: flex;
 flex-direction: column;
-align-items: start;
+align-items: center;
 color: #EFE;
 font-size: 1.5rem;
-
 
 h1 {
     margin: 0;
     padding: 0;
+}
+
+.letrasInicio {
+    float: left;
 }
 
 .apresentacao {
@@ -94,67 +163,107 @@ h1 {
     color: #39F ;
 }
 
-.foto {
-    display: flex;
-    position: absolute;
-    margin-left: 65%;
-}
-
-.foto img {
-    border-radius: 250px;
-    display: flex;
-}
-
 .sobreContainer {
- align-items: center;   
+    display: flex;
+    align-items: center;
+    margin: 0;   
 }
 
 .sobre {
-    text-align: center;
     font-size: 2rem;
 }
 
 .txtSobre {
-    text-align: start;  
     font-size: 1.3rem;
     width: 100%;
 }
 
 .txtTecnologias {
-    margin: 2rem 0 1rem 0rem;
-    text-align: center;
+    margin: 2rem 0;
     color: #EFE;
     font-size: 1.8rem;    
 }
 
 .txtPortfolio {
-    margin: 0 0 2rem 2rem;
+    margin: 0;
     text-align: center;
     color: #EFE;
     font-size: 2.5rem; 
 }
 
-@media only screen and (max-width: 1024px) {
-    .foto img {
-        width: 200px;
-    }
-
 @media only screen and (max-width: 768px) {
 font-size: 1rem;
-
-.foto img {
- width: 150px;    
-}
-
-.foto{
-    margin-left: 60%;
-}
 
 .apresentacao {
     font-size: .8rem;
 }
+}
 
-}   
+@media only screen and (max-width: 425px) {
+
+    .saudacoes {
+        font-size: .8rem;
+    }
+
+    .azul {
+        font-size: .8rem;
+    }
+    
+    .apresentacao {
+        font-size: .6rem;
+    }
+
+    .sobre {
+    font-size: 1.5rem;
+    }
+
+    .txtSobre {
+        font-size: .8rem;
+        width: 100%;
+    }
+
+    .txtTecnologias {
+        font-size: 1.3rem;    
+    }
+
+    .txtPortfolio {
+        font-size: 1.3rem; 
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .saudacoes {
+        font-size: .7rem;
+    }
+
+    .azul {
+        font-size: .7rem;
+    }
+    
+    .apresentacao {
+        font-size: .5rem;
+    }
+
+    .sobre {
+    font-size: 1.5rem;
+    }
+
+    .txtSobre {
+        font-size: .8rem;
+        width: 100%;
+    }
+
+    .txtTecnologias {
+        font-size: 1.3rem;    
+    }
+
+    .txtPortfolio {
+        font-size: 1.3rem; 
+    }
+
+}
 
 `;
 
@@ -183,7 +292,13 @@ a {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
+
+    font-size: .8rem;
+
+    Button {
+    padding: .2rem .4rem;
+}
 
 }
 `;
@@ -206,7 +321,13 @@ Button:hover {
     filter: drop-shadow(0 0 .4em #EFE);
 }
 
-@media only screen and (max-width: 768px) {
-    
+img {
+    width: 30px;
+}
+
+@media only screen and (max-width: 425px) {
+    img {
+        width: 23px;
+    }
 }
 `;

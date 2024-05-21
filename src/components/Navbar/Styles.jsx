@@ -107,6 +107,9 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  width: 100%;
+  position: fixed;
+
     .menuDesktop {
         align-items: normal;
     }
@@ -144,6 +147,29 @@ h1 {
         margin-left: 42px;
     }
 
+}
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .logoName {
+    display: flex;
+    margin-left: 3rem;
+  }
+
+  .liDesktop.isOpen a h3{
+      font-size: .9rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .logoName {
+    display: flex;
+    margin-left: 1.5rem;
+  }
 }
 `;
 

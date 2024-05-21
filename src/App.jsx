@@ -2,7 +2,7 @@ import { SectionStyled, Container, Letras, Botoes, Contato } from "./Styles";
 import NavBar from "./components/Navbar/index";
 import TextAnimation from "./components/TextAnimation/index";
 import Button from "./components/Button/index";
-import Icones from "./components/IconTec/index";
+import Icones from "./components/Icones/index";
 import CardProject from "./components/CardProject/index";
 import CardContato from "./components/CardContato/index";
 import Icon from "@mdi/react";
@@ -33,45 +33,47 @@ function App() {
           <Container className="alignAnimation">
             <TextAnimation/>
           </Container>
-          <Letras> 
-            <div className="foto">
-            <img src={MyPhoto} width="250px" alt="Alrykemes Cavalcanti"/>
-            </div>
+          <Container className="alignFoto">
+          <Letras className="letrasInicio"> 
             <h1 className="saudacoes">Oi, Sou o <span className="azul">Alrykemes Cavalcanti</span></h1>
-            <h1 className="tagDev">Desenvolvedor FullStack</h1>
+            <h1 className="azul">Desenvolvedor FullStack</h1>
             <p className="apresentacao">Sou um desenvolvedor de software dedicado 
             em criar soluções criativas e inovadoras, sempre em busca de novos desafios
             para aplicar minhas tecnicas e habilidades. 
             </p>
           <Botoes>
             <a href="./assets/dowloads" download="CurriculoAlrykemes.pdf">
-            <Button label={"Currículo"} label2={<Icon path={mdiDownload} size={1} />}/>
+            <Button label={"Currículo"} label2={<Icon className="icone" path={mdiDownload}/>}/>
             </a>
             <a href="https://drive.google.com/drive/folders/1Xn4TrdqrkqLTqM-HXVw2AawuMNL8LEbB?usp=drive_link" target="_blank" rel="noopener noreferrer">
-            <Button label={"Certificações"} label2={<Icon path={mdiLink} size={1} />}/>
+            <Button label={"Certificações"} label2={<Icon className="icone" path={mdiLink} />}/>
             </a>
           </Botoes>
           <Contato>
             <a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank" rel="noopener noreferrer">
-            <Button label={<img src={Whatsapp} width="30px" title="Whatsapp" alt="Whatsapp"/>}/>
+            <Button label={<img className="icone2" src={Whatsapp} title="Whatsapp" alt="Whatsapp"/>}/>
             </a>
             <a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank" rel="noopener noreferrer">
-            <Button label={<img src={Gmail} width="30px" title="Email" alt="Email"/>}/>
+            <Button label={<img className="icone2" src={Gmail} title="Email" alt="Email"/>}/>
             </a>
             <a href="https://www.linkedin.com/in/alrykemes-cavalcanti-ab937a267/" target="_blank" rel="noopener noreferrer">
-            <Button label={<img src={Linkedin} width="30px" title="Linkedin" alt="Linkedin"/>}/>
+            <Button label={<img className="icone2" src={Linkedin} title="Linkedin" alt="Linkedin"/>}/>
             </a>
             <a href="https://www.github.com/alrykemes" target="_blank" rel="noopener noreferrer">
-            <Button label={<img src={Github} width="30px" title="Github" alt="Github"/>}/>
+            <Button label={<img className="icone2" src={Github} title="Github" alt="Github"/>}/>
             </a>
           </Contato>
           </Letras>
+            <div className="foto">
+            <img src={MyPhoto} width="250px" alt="Alrykemes Cavalcanti"/>
+            </div>
+          </Container>
         </Container>
       </SectionStyled>
   
       <SectionStyled id="sobre">
         <Container>
-          <Letras>
+          <Letras className="sobreContainer">
             <h1 className="sobre">Sobre mim</h1>
             <p className="txtSobre">Graduando CST em Análise e Desenvolvimento de Sistemas, tenho 18 anos
             Focado em implementar, executar e integrar soluções tecnológicas, sempre em 
@@ -88,9 +90,6 @@ function App() {
             <Icones svgLocal={MySqlIcon} titleIcon={"MySql"}/>
             <Icones svgLocal={GitIcon} titleIcon={"Git"}/>
           </Container>
-          <Container className="formacao">
-
-          </Container>
         </Container>
       </SectionStyled>
       
@@ -101,7 +100,7 @@ function App() {
           </Letras>
           <Container className="portfolio">
             <CardProject 
-              linkProj={"https://gerador-de-senhas-okw7zlccz-alrykemes-projects.vercel.app"}
+              linkProj={"https://alrykemes.github.io/GeradorDeSenhas/"}
               linkRepo={"https://github.com/Alrykemes/GeradorDeSenhas"}
               projImage={geradorDeSenha} 
               title="Gerador De Senhas" 
@@ -136,25 +135,18 @@ function App() {
               <CardContato 
               titleContato="Endereço" 
               pathIcon={mdiHome}
-              content="CEP: 53441-480"
-              content2="Rua Roberto Viana de Araújo -"
-              content3="Maranguape I | Paulista - PE"
+              content="Maranguape I"
+              content2="Paulista - PE"
               />
               <CardContato 
               titleContato="Email" 
               pathIcon={mdiEmail}
               content={"alrykemesgc@gmail.com"}
-              content2={<a href="mailto:alrykemesgc@gmail.com?subject=Assunto&body=Digite sua mensagem" target="_blank" rel="noopener noreferrer">
-              <Button label={<img src={Gmail} width="30px" title="Email" alt="Email"/>}/>
-              </a>}
               />
               <CardContato 
               titleContato="Telefone" 
               pathIcon={mdiPhone}
-              content="+55 8199329-4126"
-              content2={<a href="https://api.whatsapp.com/send?phone=5581993294126&text=Ol%C3%A1,%20Gostaria%20de%20saber%20sobre%20Sua%20Atua%C3%A7%C3%A3o%20Profissional%20Alrykemes?" target="_blank" rel="noopener noreferrer">
-              <Button label={<img src={Whatsapp} width="30px" title="Whatsapp" alt="Whatsapp"/>}/>
-              </a>}
+              content="+55(81)99329-4126"
               /> 
             </Container>
           </Container>

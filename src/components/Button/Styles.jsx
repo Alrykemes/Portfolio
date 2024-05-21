@@ -15,5 +15,17 @@ font-size: 1rem;
 cursor: pointer;
 transition: 0.2s;
 
+.icone {
+    width: 1.7rem;
+} 
 
+@media only screen and (max-width: 425px) {
+
+font-size: .7rem;
+
+.icone {
+    width: .9rem;
+}
+
+}
 `;
